@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <h1 class="my-3 text-center">Busca tu juego favorito!</h1>
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Buscar por código" @keyup="findProducts" v-model="codigo">
       <div class="input-group-append">

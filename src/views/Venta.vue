@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <h3 class= "display-4 text-center mt-5">Cantidad de productos con stock: {{productosConStock.length}} </h3>
+        <h1 class=" display-3 my-3 text-center">Compra ahora!!</h1>
+        <h3 class= "display-5 text-center mt-5">Cantidad de productos con stock: {{productosConStock.length}} </h3>
         <table class="table table-bordered mt-5 text-center">
         <thead>
             <tr>
@@ -12,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(item, index) in productosConStock" :key="index">
+            <tr v-for="(item, index) in productosConStock" :key="index" :class="{bold: item.destacado}">
             <td>{{item.codigo}}</td>
             <td>{{item.nombre}}</td>
             <td>{{item.stock}}</td>
@@ -40,3 +41,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+    .bold{
+        font-weight:bold;
+    }
+</style>
